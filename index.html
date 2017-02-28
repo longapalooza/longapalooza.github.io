@@ -1,5 +1,119 @@
-<html>
-  <script>
-    document.write("test");
-  </script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="screen">
+
+    <script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/raphael.export.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.menu.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/math.min.js"></script>
+    <script src="js/custom.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="menu_bar">
+      <ul class="main-menu">
+        <li>
+          File
+          <ul>
+            <li><a id="new" href="">New</a></li>
+            <li><a id="open" href="">Open...</a></li>
+            <li><a id="save" href="">Save As...</a></li>
+            <li class="separator"></li>
+            <li><a id="exit" href="">Exit</a></li>
+          </ul>
+        </li>
+        <li>
+          Edit
+          <ul>
+            <li>
+              Input
+              <ul>
+                <li><a id="add_inp" href="">Add</a></li>
+                <li><a id="edit_inp" href="">Edit</a></li>
+                <li><a id="del_inp" href="">Delete</a></li>
+              </ul>
+            </li>
+            <li>
+              Component
+              <ul>
+                <li><a id="add_com" href="">Add</a></li>
+                <li><a id="edit_com" href="">Edit</a></li>
+                <li><a id="del_com" href="">Delete</a></li>
+              </ul>
+            </li>
+            <li>
+              Correlation
+              <ul>
+                <li><a id="add_cor" href="">Add</a></li>
+                <li><a id="edit_cor" href="">Edit</a></li>
+                <li><a id="del_cor" href="">Delete</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Toolbar
+          <ul>
+            <li><a id="toggle_toolbar" href="">Hide Toolbar</a></li>
+            <li><a id="toggle_tip" href="">View Element Info</a></li>
+            <li><a id="toggle_before" href="">View Dependency View (Green)</a></li>
+            <li><a id="toggle_after" href="">View Dependency View (Red)</a></li>
+            <li><a id="toggle_correlation" href="">View Correlation View (Blue)</a></li>
+          </ul>
+        </li>
+        <li>
+          Calculate
+          <ul>
+            <li><a id="calc_u" href="">Component Total Uncertainty</a></li>
+            <li><a id="calc_umf" href="">Uncertainty Magnification Factor</a></li>
+            <li><a id="calc_upc" href="">Uncertainty Percent Contribution</a></li>
+          </ul>
+        </li>
+        <li>
+          View
+          <ul id="view">
+            <li><a id="inp_sum" href="">Input Summary</a></li>
+            <li><a id="com_sum" href="">Components Summary</a></li>
+            <li><a id="cor_sum" href="">Correlation Summary</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div id="toolbar"></div>
+    <div id="holder"></div>
+
+    <div id="add_com_dialog" class="dialog" title="Add Component"></div>
+    <div id="add_cor_dialog" class="dialog" title="Add Correlation"></div>
+    <div id="add_inp_dialog" class="dialog" title="Add Input"></div>
+    <div id="calc_u_dialog" class="dialog"></div>
+    <div id="calc_umf_dialog" class="dialog"></div>
+    <div id="calc_upc_dialog" class="dialog"></div>
+    <div id="com_sum_dialog" class="dialog" title="Component Summary"></div>
+    <div id="cor_sum_dialog" class="dialog" title="Correlation Summary"></div>
+    <div id="del_com_dialog" class="dialog" title="Component Delete Confirmation"></div>
+    <div id="del_com_select_dialog" class="dialog" title="Select Component to Delete"></div>
+    <div id="del_cor_dialog" class="dialog" title="Correlation Delete Confirmation"></div>
+    <div id="del_cor_select_dialog" class="dialog" title="Select Correlation to Delete"></div>
+    <div id="del_inp_dialog" class="dialog" title="Input Delete Confirmation"></div>
+    <div id="del_inp_select_dialog" class="dialog" title="Select Input to Delete"></div>
+    <div id="edit_com_dialog" class="dialog" title="Edit Component"></div>
+    <div id="edit_com_select_dialog" class="dialog" title="Select Component to Edit"></div>
+    <div id="edit_cor_dialog" class="dialog" title="Edit Correlation"></div>
+    <div id="edit_cor_select_dialog" class="dialog" title="Select Correlation to Edit"></div>
+    <div id="edit_inp_dialog" class="dialog" title="Edit Input"></div>
+    <div id="edit_inp_select_dialog" class="dialog" title="Select Input to Edit"></div>
+    <div id="exit_dialog" class="dialog" title="Exit"></div>
+    <div id="inp_sum_dialog" class="dialog" title="Input Summary"></div>
+    <div id="new_dialog" class="dialog" title="New"></div>
+    <div id="save_dialog" class="dialog" title="Save As..."></div>
+    <div id="u_sum_dialog" classs="dialog" title="Component Total Uncertainty Summary"></div>
+    <div id="umf_sum_dialog" classs="dialog" title="Uncertainty Magnification Factor Summary"></div>
+    <div id="upc_sum_dialog" classs="dialog" title="Uncertainty Percent Contribution Summary"></div>
+    <div id="tip"></div>
+  </body>
+  <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 </html>
